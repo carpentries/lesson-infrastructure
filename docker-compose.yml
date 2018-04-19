@@ -6,10 +6,14 @@
 version: "3"
 services:
   site:
-    image: jekyll/jekyll:3
+    build: ./
+    image: carpentry/jekyll:3
     command: jekyll serve
     volumes:
       - $PWD:/srv/jekyll
       - $PWD/vendor/bundle:/usr/local/bundle
     ports:
       - "127.0.0.1:4000:4000"
+  lesson-check:
+    image: carpentry/jekyll:3
+    command: make lesson-check lesson-check-all
