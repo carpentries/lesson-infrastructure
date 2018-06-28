@@ -1,0 +1,19 @@
+# Default docker-compose file to serve Carpentry jekyll sites.
+#
+# 1. Follow https://docs.docker.com/compose/install/ to install docker-compose and Docker Engine
+# 2. Run `docker-compose up -d` to start a Jekyll server that watches the repository and reloads on change.
+# 3. Visit `https://localhost:4000` to view the lesson site. NOTE: github-based URLs will be broken
+version: "3"
+services:
+  site:
+    build: ./
+    image: carpentry/jekyll:3
+    command: jekyll serve
+    volumes:
+      - $PWD:/srv/jekyll
+      - $PWD/vendor/bundle:/usr/local/bundle
+    ports:
+      - "127.0.0.1:4000:4000"
+  lesson-check:
+    image: carpentry/jekyll:3
+    command: make lesson-check lesson-check-all

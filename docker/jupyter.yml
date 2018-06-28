@@ -1,0 +1,15 @@
+# Default docker-compose file to serve a jupyter notebook with the current repository mounted into the
+# `/home/jovyan/work` directory
+#
+# 1. Follow https://docs.docker.com/compose/install/ to install docker-compose and Docker Engine
+# 2. Run `docker-compose -f jupyter.yml up -d` to start the jupyter notebook stack on localhost:8888
+# 3. Visit 'localhost:8888' in a browser to access the notebook server.
+version: "3"
+services:
+  jupyter:
+    image: jupyter/datascience-notebook:latest
+    volumes:
+      - $PWD:/home/jovyan/work
+    ports:
+      - "127.0.0.1:8888:8888"
+
