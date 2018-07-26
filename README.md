@@ -4,6 +4,7 @@ Repository to store minutes from infrastructure subcommittee, propose and discus
 
 ## Members
 
+* Maxim Belkin
 * Sarah Brown
 * Rémi Emonet
 * Kate Hertweck
