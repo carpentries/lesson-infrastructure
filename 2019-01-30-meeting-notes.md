@@ -7,7 +7,7 @@
 
 ## Agenda
 
-### Lessonx Releases
+### Lesson Releases
 
 - repo with scripts: https://github.com/swcarpentry/swc-releases
 
