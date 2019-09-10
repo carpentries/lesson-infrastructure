@@ -8,7 +8,7 @@ Repository to store minutes from infrastructure subcommittee, propose and discus
 * Sarah Brown
 * Rémi Emonet
 * Kate Hertweck
-* Cam McDonell
+* Cam MacDonell
 * François Michonneau
 * Tracy Teal
 * Raniere Silva
